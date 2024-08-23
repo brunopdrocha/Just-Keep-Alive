@@ -18,3 +18,7 @@ O jogo apresenta habilidades temporárias que podem ser adquiridas durante a exp
 
 ## Informação
 O jogo é repleto de mistérios, e o jogador pode encontrar missões secretas ao longo do tempo. Essas missões adicionais oferecem mais desafios e recompensas, adicionando camadas de profundidade à narrativa e à jogabilidade.
+
+# Businnes Canva Game
+
+Link LucidChart https://lucid.app/lucidspark/e6ced033-696b-4d8a-8113-961d6e9526dd/edit?viewport_loc=-16%2C2347%2C2457%2C1153%2C0_0&invitationId=inv_a51624d8-6469-46d2-a6c2-cbc99fc93f3a
