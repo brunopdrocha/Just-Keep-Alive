@@ -1,3 +1,9 @@
+# Membros do Projeto
+-  Bruno Pilão da Rocha
+-  Gabriel Perrota
+-  Fernanda Moyses
+-  Victor Countinho
+  
 # Explicação do Jogo
 Você controla um personagem que, ao tentar voltar para casa, se encontra perdido em uma floresta misteriosa. Durante sua jornada, ele cai em um buraco escuro e profundo, sem saída aparente. O jogador deve explorar este ambiente sombrio e desconhecido, enfrentando perigos e mistérios ao longo do caminho, enquanto busca uma forma de escapar. A atmosfera é densa e enigmática, com segredos ocultos à espera de serem desvendados.
 
