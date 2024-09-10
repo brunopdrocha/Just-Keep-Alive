@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=3 uid="uid://bxghuyw8w1ovk"]
+
+[ext_resource type="Script" path="res://Script/tela_inicial.gd" id="1_7q1yx"]
+[ext_resource type="Texture2D" uid="uid://s84cesmupueh" path="res://img/backgorund/background_img.webp" id="2_w508h"]
+[ext_resource type="Theme" uid="uid://dhdqp8nddjawc" path="res://templates/button.tres" id="3_2knrt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldwxa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xf2tk"]
+bg_color = Color(0.53, 0, 0.0971667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pn33w"]
+bg_color = Color(0.25, 0.25, 0.25, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.25, 0.25, 0.25, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djj8s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8e5bv"]
+
+[node name="Tela Inicial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7q1yx")
+
+[node name="BackGround" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_w508h")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -116.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.65
+
+[node name="Start Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("3_2knrt")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_ldwxa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xf2tk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pn33w")
+text = "Start
+"
+
+[node name="Credits Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("3_2knrt")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_djj8s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xf2tk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pn33w")
+text = "Credits
+"
+
+[node name="Quit Game Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("3_2knrt")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_8e5bv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xf2tk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pn33w")
+text = "	Quit Game
+"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Credits Button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Quit Game Button" to="." method="_on_quit_game_button_pressed"]

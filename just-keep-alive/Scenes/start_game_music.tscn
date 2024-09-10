@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bub836wikxjkc"]
+
+[ext_resource type="AudioStream" uid="uid://ci3flr5idugyk" path="res://Monsters in the Shadows.mp3" id="1_k2tmq"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_k2tmq")
+autoplay = true
