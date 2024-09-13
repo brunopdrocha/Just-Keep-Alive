@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://pv2cxopfacy8"]
+[gd_scene load_steps=2 format=3 uid="uid://pv2cxopfacy8"]
+
+[sub_resource type="TileSet" id="TileSet_5733q"]
 
 [node name="Gameplay" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-2, 2.38419e-07)
+scale = Vector2(1.53343, 1.37911)
+tile_set = SubResource("TileSet_5733q")
+collision_visibility_mode = 2
+format = 2

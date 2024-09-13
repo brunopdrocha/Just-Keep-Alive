@@ -1,3 +1,102 @@
-[gd_scene format=3 uid="uid://cio58gjmmnjww"]
+[gd_scene load_steps=8 format=3 uid="uid://cio58gjmmnjww"]
 
-[node name="credits" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://s84cesmupueh" path="res://img/backgorund/background_img.webp" id="1_hgyff"]
+[ext_resource type="Script" path="res://Scenes/credits.gd" id="1_obm73"]
+[ext_resource type="Theme" uid="uid://dhdqp8nddjawc" path="res://templates/button.tres" id="2_wb4yo"]
+[ext_resource type="FontFile" uid="uid://d3bysvbbbcqu4" path="res://font/Classic-Font.ttf" id="3_8vksi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0vhc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbgrv"]
+bg_color = Color(0.53, 0, 0.0971667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8vem"]
+bg_color = Color(0.25, 0.25, 0.25, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.25, 0.25, 0.25, 1)
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_obm73")
+
+[node name="BackGround" type="TextureRect" parent="."]
+self_modulate = Color(0.205117, 0.205117, 0.205117, 1)
+light_mask = 0
+visibility_layer = 512
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_hgyff")
+expand_mode = 1
+
+[node name="TextEdit" type="TextEdit" parent="BackGround"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -503.0
+offset_top = -213.0
+offset_right = 503.0
+offset_bottom = 213.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_8vksi")
+theme_override_font_sizes/font_size = 20
+text = "This Game was developed by a group of Students from IBMEC-RJ as part of their academic journey to explore creativity, innovation and technology.
+in game development.
+
+Mission
+You have to survive as long as you can against mobs it will spawn randoly into the zone. You will see some features playing the game so i won't 
+say anything , give a try and have fun. 
+
+Members
+	- Bruno Pilão 
+	- Fernanda Moyses
+	- Gabryel Perrota
+	- Victor Coutinho"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -54.0
+offset_top = -99.0
+offset_right = 54.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 0.65
+
+[node name="Back Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme = ExtResource("2_wb4yo")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_d0vhc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kbgrv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_y8vem")
+text = "Back"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Back Button" to="." method="_on_back_button_pressed"]
