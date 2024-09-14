@@ -1,0 +1,212 @@
+[gd_scene load_steps=39 format=3 uid="uid://bc8sncdv7qsb2"]
+
+[ext_resource type="Texture2D" uid="uid://cty2t7rhwug1o" path="res://img/character/death animation/death1.png" id="1_0rg2e"]
+[ext_resource type="Script" path="res://Script/player.gd" id="1_x1hft"]
+[ext_resource type="Texture2D" uid="uid://cmjidmngmgj6q" path="res://img/character/death animation/death2.png" id="2_361aw"]
+[ext_resource type="Texture2D" uid="uid://crn7d0h2ktxlo" path="res://img/character/death animation/death3.png" id="3_m5prv"]
+[ext_resource type="Texture2D" uid="uid://dbi035psje2ql" path="res://img/character/death animation/death4.png" id="4_4ygja"]
+[ext_resource type="Texture2D" uid="uid://cgy4ev76dv43f" path="res://img/character/Character with sword and shield/idle/idle down1.png" id="5_ovpp7"]
+[ext_resource type="Texture2D" uid="uid://bd6leb57wjesb" path="res://img/character/Character with sword and shield/idle/idle down2.png" id="6_ycyot"]
+[ext_resource type="Texture2D" uid="uid://ccvlcwg5itnlk" path="res://img/character/Character with sword and shield/idle/idle down3.png" id="7_v6cci"]
+[ext_resource type="Texture2D" uid="uid://dyns0wdbma5ev" path="res://img/character/Character with sword and shield/idle/idle down4.png" id="8_jrj2m"]
+[ext_resource type="Texture2D" uid="uid://bduyqrbbjbah5" path="res://img/character/Character with sword and shield/idle/idle left1.png" id="9_yndoh"]
+[ext_resource type="Texture2D" uid="uid://27gu5mser5vj" path="res://img/character/Character with sword and shield/idle/idle left2.png" id="10_8xsxp"]
+[ext_resource type="Texture2D" uid="uid://bumshue11gfnt" path="res://img/character/Character with sword and shield/idle/idle left3.png" id="11_n287j"]
+[ext_resource type="Texture2D" uid="uid://cqcbwn2lphss3" path="res://img/character/Character with sword and shield/idle/idle left4.png" id="12_wrs6g"]
+[ext_resource type="Texture2D" uid="uid://bwjorht7u1jnc" path="res://img/character/Character with sword and shield/idle/idle right1.png" id="13_a13fm"]
+[ext_resource type="Texture2D" uid="uid://dq4vw801abwku" path="res://img/character/Character with sword and shield/idle/idle right2.png" id="14_fn8nw"]
+[ext_resource type="Texture2D" uid="uid://nmpi7skar0c8" path="res://img/character/Character with sword and shield/idle/idle right3.png" id="15_mycrb"]
+[ext_resource type="Texture2D" uid="uid://d0qmp7i7j463x" path="res://img/character/Character with sword and shield/idle/idle right4.png" id="16_j30w5"]
+[ext_resource type="Texture2D" uid="uid://d21gwrwqv25nd" path="res://img/character/Character with sword and shield/idle/idle up1.png" id="17_jls6w"]
+[ext_resource type="Texture2D" uid="uid://0nyjri2eg7nu" path="res://img/character/Character with sword and shield/idle/idle up2.png" id="18_kq1gm"]
+[ext_resource type="Texture2D" uid="uid://ds67iyi4w7ngq" path="res://img/character/Character with sword and shield/idle/idle up3.png" id="19_r5q7p"]
+[ext_resource type="Texture2D" uid="uid://ld2artsipgbj" path="res://img/character/Character with sword and shield/idle/idle up4.png" id="20_jj3gu"]
+[ext_resource type="Texture2D" uid="uid://briwu45v6q0tm" path="res://img/character/Character with sword and shield/walk/walk down1.png" id="21_shgyo"]
+[ext_resource type="Texture2D" uid="uid://ccft2skfo1h2n" path="res://img/character/Character with sword and shield/walk/walk down2.png" id="22_12iyn"]
+[ext_resource type="Texture2D" uid="uid://r72n3gv7u02d" path="res://img/character/Character with sword and shield/walk/walk down3.png" id="23_e73a7"]
+[ext_resource type="Texture2D" uid="uid://cu31v1l3xva8y" path="res://img/character/Character with sword and shield/walk/walk down4.png" id="24_eibsm"]
+[ext_resource type="Texture2D" uid="uid://bel8dwhluir1m" path="res://img/character/Character with sword and shield/walk/walk left1.png" id="25_80tq8"]
+[ext_resource type="Texture2D" uid="uid://blqhyqxevy3d8" path="res://img/character/Character with sword and shield/walk/walk left2.png" id="26_8mvmr"]
+[ext_resource type="Texture2D" uid="uid://7ekk74ll6p1m" path="res://img/character/Character with sword and shield/walk/walk left3.png" id="27_hder1"]
+[ext_resource type="Texture2D" uid="uid://kjgyqg52vlfl" path="res://img/character/Character with sword and shield/walk/walk left4.png" id="28_phw7f"]
+[ext_resource type="Texture2D" uid="uid://hi2hnb8subaa" path="res://img/character/Character with sword and shield/walk/walk right1.png" id="29_xo3oj"]
+[ext_resource type="Texture2D" uid="uid://pu4fghn2pyje" path="res://img/character/Character with sword and shield/walk/walk right2.png" id="30_qnu53"]
+[ext_resource type="Texture2D" uid="uid://cgxatngjlc3w7" path="res://img/character/Character with sword and shield/walk/walk right3.png" id="31_bb2wp"]
+[ext_resource type="Texture2D" uid="uid://lwhcpm1615vv" path="res://img/character/Character with sword and shield/walk/walk right4.png" id="32_r6p6n"]
+[ext_resource type="Texture2D" uid="uid://da3fs8exjui4q" path="res://img/character/Character with sword and shield/walk/walk up1.png" id="33_suiag"]
+[ext_resource type="Texture2D" uid="uid://5d7prtmmdji5" path="res://img/character/Character with sword and shield/walk/walk up2.png" id="34_oxd1a"]
+[ext_resource type="Texture2D" uid="uid://chayp3libon5x" path="res://img/character/Character with sword and shield/walk/walk up3.png" id="35_83abw"]
+[ext_resource type="Texture2D" uid="uid://bkjq7l0af081x" path="res://img/character/Character with sword and shield/walk/walk up4.png" id="36_art4d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q1ra5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0rg2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_361aw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m5prv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4ygja")
+}],
+"loop": true,
+"name": &"Death Animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ovpp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ycyot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v6cci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jrj2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jrj2m")
+}],
+"loop": true,
+"name": &"Idle Down ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_yndoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8xsxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_n287j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wrs6g")
+}],
+"loop": true,
+"name": &"Idle Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_a13fm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fn8nw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mycrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_j30w5")
+}],
+"loop": true,
+"name": &"Idle Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_jls6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_kq1gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_r5q7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jj3gu")
+}],
+"loop": true,
+"name": &"Idle Up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_shgyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_12iyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_e73a7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_eibsm")
+}],
+"loop": true,
+"name": &"Walk Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_80tq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_8mvmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hder1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_phw7f")
+}],
+"loop": true,
+"name": &"Walk Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_xo3oj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_qnu53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bb2wp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_r6p6n")
+}],
+"loop": true,
+"name": &"Walk Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_suiag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_oxd1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_83abw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_art4d")
+}],
+"loop": true,
+"name": &"Walk Up",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_x1hft")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.90735e-06, 1)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_q1ra5")
+animation = &"Idle Down "
+frame_progress = 0.671943
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+one_way_collision = true
+one_way_collision_margin = 0.0

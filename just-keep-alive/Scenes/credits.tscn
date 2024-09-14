@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cio58gjmmnjww"]
 
 [ext_resource type="Texture2D" uid="uid://s84cesmupueh" path="res://img/backgorund/background_img.webp" id="1_hgyff"]
-[ext_resource type="Script" path="res://Scenes/credits.gd" id="1_obm73"]
+[ext_resource type="Script" path="res://Script/credits.gd" id="1_obm73"]
 [ext_resource type="Theme" uid="uid://dhdqp8nddjawc" path="res://templates/button.tres" id="2_wb4yo"]
 [ext_resource type="FontFile" uid="uid://d3bysvbbbcqu4" path="res://font/Classic-Font.ttf" id="3_8vksi"]
 
@@ -31,6 +31,7 @@ script = ExtResource("1_obm73")
 self_modulate = Color(0.205117, 0.205117, 0.205117, 1)
 light_mask = 0
 visibility_layer = 512
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_hgyff")
