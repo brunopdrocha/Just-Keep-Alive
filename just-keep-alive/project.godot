@@ -21,6 +21,8 @@ StartGameMusic="*res://Scenes/start_game_music.tscn"
 [display]
 
 window/size/viewport_width=1156
+window/size/mode=4
+window/stretch/mode="viewport"
 
 [input]
 

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 170
 
-@onready var anim = $AnimatedSprite2D  
+@onready var anim = $"Character Walking"
 var current_dir = ""
 
 func _ready() -> void:

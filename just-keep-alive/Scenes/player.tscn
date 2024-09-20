@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bc8sncdv7qsb2"]
+[gd_scene load_steps=40 format=3 uid="uid://bc8sncdv7qsb2"]
 
 [ext_resource type="Texture2D" uid="uid://cty2t7rhwug1o" path="res://img/character/death animation/death1.png" id="1_0rg2e"]
 [ext_resource type="Script" path="res://Script/player.gd" id="1_x1hft"]
@@ -73,7 +73,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_jrj2m")
 }],
-"loop": true,
+"loop": false,
 "name": &"Idle Down ",
 "speed": 5.0
 }, {
@@ -197,16 +197,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4awgg"]
+size = Vector2(25, 7)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_x1hft")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Character Walking" type="AnimatedSprite2D" parent="."]
 position = Vector2(1.90735e-06, 1)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_q1ra5")
-animation = &"Idle Down "
-frame_progress = 0.671943
+animation = &"Walk Down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 14.5)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_4awgg")
 one_way_collision = true
 one_way_collision_margin = 0.0
