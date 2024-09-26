@@ -7,7 +7,7 @@
 # 🕹️ Nome do jogo : Just Keep Alive
 
 # 📖 Explicação do Jogo
-Você controla um personagem que, ao tentar voltar para casa, se encontra perdido em uma floresta misteriosa. Durante sua jornada, ele cai em um buraco escuro e profundo, sem saída aparente. O jogador deve explorar este ambiente sombrio e desconhecido, enfrentando perigos e mistérios ao longo do caminho, enquanto busca uma forma de escapar. A atmosfera é densa e enigmática, com segredos ocultos à espera de serem desvendados.
+Você controla um personagem que, ao tentar voltar para casa, se encontra perdido em uma floresta misteriosa. Durante sua jornada, ele cai em um buraco escuro e profundo, sem saída aparente. O jogador deve explorar este ambiente desconhecido, enfrentando perigos e mistérios ao longo do caminho, enquanto busca uma forma de escapar. A atmosfera é densa e enigmática, com segredos ocultos à espera de serem desvendados.
 
 ## ❔ Tomada de Decisão
 Para sobreviver, o personagem precisa eliminar os inimigos que surgem ao seu redor. Cada encontro requer escolhas rápidas e estratégicas, onde cada decisão pode ser a diferença entre a vida e a morte.
