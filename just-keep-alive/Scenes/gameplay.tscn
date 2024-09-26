@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://pv2cxopfacy8"]
+[gd_scene load_steps=6 format=3 uid="uid://pv2cxopfacy8"]
 
 [ext_resource type="PackedScene" uid="uid://bc8sncdv7qsb2" path="res://Scenes/player.tscn" id="1_5v0lf"]
 [ext_resource type="Texture2D" uid="uid://boqvbx1wa2c27" path="res://img/gameplay_background/Top-Down-Forest/PNG/top-down-forest-tileset.png" id="1_kq0se"]
+[ext_resource type="PackedScene" uid="uid://d15lpsm3k0jmd" path="res://Scenes/Rats.tscn" id="3_alu2d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i2tf5"]
 texture = ExtResource("1_kq0se")
@@ -163,5 +164,10 @@ layer_2/name = "Layer2"
 layer_2/tile_data = PackedInt32Array(2359311, 655360, 3, 2424847, 655360, 4, 2490383, 655360, 5, 2359312, 720896, 3, 2424848, 720896, 4, 2490384, 720896, 5, 2359313, 786432, 3, 2424849, 786432, 4, 2490385, 786432, 5, 2162697, 655360, 3, 2228233, 655360, 4, 2293769, 655360, 5, 2162698, 720896, 3, 2228234, 720896, 4, 2293770, 720896, 5, 2162699, 786432, 3, 2228235, 786432, 4, 2293771, 786432, 5, 2162693, 655360, 3, 2228229, 655360, 4, 2293765, 655360, 5, 2162694, 720896, 3, 2228230, 720896, 4, 2293766, 720896, 5, 2162695, 786432, 3, 2228231, 786432, 4, 2293767, 786432, 5, -2162767, 655360, 7, -2097231, 655360, 8, -2031695, 655360, 9, -2162766, 720896, 7, -2097230, 720896, 8, -2031694, 720896, 9, -2162765, 786432, 7, -2097229, 786432, 8, -2031693, 786432, 9, -2031679, 655360, 7, -1966143, 655360, 8, -1900607, 655360, 9, -2031678, 720896, 7, -1966142, 720896, 8, -1900606, 720896, 9, -2031677, 786432, 7, -1966141, 786432, 8, -1900605, 786432, 9, -3014741, 655360, 7, -2949205, 655360, 8, -2883669, 655360, 9, -3014740, 720896, 7, -2949204, 720896, 8, -2883668, 720896, 9, -3014739, 786432, 7, -2949203, 786432, 8, -2883667, 786432, 9)
 
 [node name="Player" parent="TileMap" instance=ExtResource("1_5v0lf")]
+disable_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="TileMap/Player"]
+
+[node name="Rats" parent="TileMap" instance=ExtResource("3_alu2d")]
+position = Vector2(154, -82)
+disable_mode = 1
