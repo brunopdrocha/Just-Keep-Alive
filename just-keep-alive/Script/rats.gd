@@ -1,10 +1,15 @@
 extends CharacterBody2D
 
+
 var speed = 35
 var player_chase = true
 var player = null
-
+var enemy_scene = preload("res://Scenes/Rats.tscn")
+var dead = false
+	
 func _physics_process(delta):
+	
+	
 	if player_chase and player != null:
 		var direction = (player.position - position).normalized()
 		velocity = direction * speed
@@ -25,6 +30,7 @@ func _physics_process(delta):
 				$AnimatedSprite2D.play("Walk Down")
 			else:
 				$AnimatedSprite2D.play("Walk Up")
+				
 
 	move_and_slide()
 func _on_detection_area_body_entered(body):
@@ -35,3 +41,18 @@ func _on_detection_area_body_entered(body):
 func _on_detection_area_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	player = null
 	player_chase = false
+
+
+	
+
+
+func _on_detection_area_area_entered(area):
+	if area.is_in_group("Sword"):
+		dead == true;
+		$AnimatedSprite2D.play("Death");
+
+
+func _on_animated_sprite_2d_animation_finished():
+	
+	if $AnimatedSprite2D.animation == "Death":
+		queue_free()

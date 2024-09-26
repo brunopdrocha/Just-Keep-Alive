@@ -1,23 +1,39 @@
-[gd_scene load_steps=40 format=3 uid="uid://bc8sncdv7qsb2"]
+[gd_scene load_steps=57 format=3 uid="uid://bc8sncdv7qsb2"]
 
 [ext_resource type="Texture2D" uid="uid://cty2t7rhwug1o" path="res://img/character/death animation/death1.png" id="1_0rg2e"]
 [ext_resource type="Script" path="res://Script/player.gd" id="1_x1hft"]
 [ext_resource type="Texture2D" uid="uid://cmjidmngmgj6q" path="res://img/character/death animation/death2.png" id="2_361aw"]
+[ext_resource type="Texture2D" uid="uid://c7dcofutopo58" path="res://img/character/Character with sword and shield/attack/attack down1.png" id="2_t5q2d"]
+[ext_resource type="Texture2D" uid="uid://c3rvm7yvu0qd2" path="res://img/character/Character with sword and shield/attack/attack down2.png" id="3_ikwt7"]
 [ext_resource type="Texture2D" uid="uid://crn7d0h2ktxlo" path="res://img/character/death animation/death3.png" id="3_m5prv"]
 [ext_resource type="Texture2D" uid="uid://dbi035psje2ql" path="res://img/character/death animation/death4.png" id="4_4ygja"]
+[ext_resource type="Texture2D" uid="uid://d4mkv00lg2a7e" path="res://img/character/Character with sword and shield/attack/attack down3.png" id="4_lbfg5"]
+[ext_resource type="Texture2D" uid="uid://qyc2tvt8hsu2" path="res://img/character/Character with sword and shield/attack/attack down4.png" id="5_bpqq7"]
 [ext_resource type="Texture2D" uid="uid://cgy4ev76dv43f" path="res://img/character/Character with sword and shield/idle/idle down1.png" id="5_ovpp7"]
+[ext_resource type="Texture2D" uid="uid://2h0f8o8t8hh1" path="res://img/character/Character with sword and shield/attack/attack left1.png" id="6_usobp"]
 [ext_resource type="Texture2D" uid="uid://bd6leb57wjesb" path="res://img/character/Character with sword and shield/idle/idle down2.png" id="6_ycyot"]
 [ext_resource type="Texture2D" uid="uid://ccvlcwg5itnlk" path="res://img/character/Character with sword and shield/idle/idle down3.png" id="7_v6cci"]
+[ext_resource type="Texture2D" uid="uid://cyu1twlc1lk4b" path="res://img/character/Character with sword and shield/attack/attack left2.png" id="7_vroke"]
 [ext_resource type="Texture2D" uid="uid://dyns0wdbma5ev" path="res://img/character/Character with sword and shield/idle/idle down4.png" id="8_jrj2m"]
+[ext_resource type="Texture2D" uid="uid://csvlsevs4afcq" path="res://img/character/Character with sword and shield/attack/attack left3.png" id="8_nu4y5"]
+[ext_resource type="Texture2D" uid="uid://d4ikod0tu8iby" path="res://img/character/Character with sword and shield/attack/attack left4.png" id="9_3ae4y"]
 [ext_resource type="Texture2D" uid="uid://bduyqrbbjbah5" path="res://img/character/Character with sword and shield/idle/idle left1.png" id="9_yndoh"]
 [ext_resource type="Texture2D" uid="uid://27gu5mser5vj" path="res://img/character/Character with sword and shield/idle/idle left2.png" id="10_8xsxp"]
+[ext_resource type="Texture2D" uid="uid://48nklmsw0dg5" path="res://img/character/Character with sword and shield/attack/attack right1.png" id="10_lkp3t"]
 [ext_resource type="Texture2D" uid="uid://bumshue11gfnt" path="res://img/character/Character with sword and shield/idle/idle left3.png" id="11_n287j"]
+[ext_resource type="Texture2D" uid="uid://b3w1ryf5yeprk" path="res://img/character/Character with sword and shield/attack/attack right2.png" id="11_o4sur"]
+[ext_resource type="Texture2D" uid="uid://763svde42n61" path="res://img/character/Character with sword and shield/attack/attack right3.png" id="12_ferxb"]
 [ext_resource type="Texture2D" uid="uid://cqcbwn2lphss3" path="res://img/character/Character with sword and shield/idle/idle left4.png" id="12_wrs6g"]
 [ext_resource type="Texture2D" uid="uid://bwjorht7u1jnc" path="res://img/character/Character with sword and shield/idle/idle right1.png" id="13_a13fm"]
+[ext_resource type="Texture2D" uid="uid://cfv62v6a8a8es" path="res://img/character/Character with sword and shield/attack/attack right4.png" id="13_rmoly"]
 [ext_resource type="Texture2D" uid="uid://dq4vw801abwku" path="res://img/character/Character with sword and shield/idle/idle right2.png" id="14_fn8nw"]
+[ext_resource type="Texture2D" uid="uid://b4dbbtwnuvxl" path="res://img/character/Character with sword and shield/attack/attack up1.png" id="14_guixe"]
 [ext_resource type="Texture2D" uid="uid://nmpi7skar0c8" path="res://img/character/Character with sword and shield/idle/idle right3.png" id="15_mycrb"]
+[ext_resource type="Texture2D" uid="uid://7dxvbmakndi7" path="res://img/character/Character with sword and shield/attack/attack up2.png" id="15_t3avh"]
+[ext_resource type="Texture2D" uid="uid://bjptkn1c68kxp" path="res://img/character/Character with sword and shield/attack/attack up3.png" id="16_04uc2"]
 [ext_resource type="Texture2D" uid="uid://d0qmp7i7j463x" path="res://img/character/Character with sword and shield/idle/idle right4.png" id="16_j30w5"]
 [ext_resource type="Texture2D" uid="uid://d21gwrwqv25nd" path="res://img/character/Character with sword and shield/idle/idle up1.png" id="17_jls6w"]
+[ext_resource type="Texture2D" uid="uid://o4ahcmg6w0kp" path="res://img/character/Character with sword and shield/attack/attack up4.png" id="17_jt2hb"]
 [ext_resource type="Texture2D" uid="uid://0nyjri2eg7nu" path="res://img/character/Character with sword and shield/idle/idle up2.png" id="18_kq1gm"]
 [ext_resource type="Texture2D" uid="uid://ds67iyi4w7ngq" path="res://img/character/Character with sword and shield/idle/idle up3.png" id="19_r5q7p"]
 [ext_resource type="Texture2D" uid="uid://ld2artsipgbj" path="res://img/character/Character with sword and shield/idle/idle up4.png" id="20_jj3gu"]
@@ -42,7 +58,76 @@
 size = Vector2(25, 7)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q1ra5"]
+resource_local_to_scene = true
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t5q2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ikwt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lbfg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bpqq7")
+}],
+"loop": false,
+"name": &"Attack down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_usobp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vroke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nu4y5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3ae4y")
+}],
+"loop": true,
+"name": &"Attack left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_lkp3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_o4sur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ferxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rmoly")
+}],
+"loop": true,
+"name": &"Attack right",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_guixe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_t3avh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_04uc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_jt2hb")
+}],
+"loop": false,
+"name": &"Attack up",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_0rg2e")
@@ -200,7 +285,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdh38"]
+size = Vector2(25, 47)
+
+[node name="Player" type="CharacterBody2D" groups=["Sword"]]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_x1hft")
@@ -212,7 +300,16 @@ one_way_collision = true
 one_way_collision_margin = 0.0
 
 [node name="Character Walking" type="AnimatedSprite2D" parent="."]
-position = Vector2(1.90735e-06, 1)
+position = Vector2(0, 1)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_q1ra5")
-animation = &"Walk Down"
+animation = &"Attack right"
+
+[node name="AttackArea" type="Area2D" parent="." groups=["Sword"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(24.5, 9.5)
+shape = SubResource("RectangleShape2D_vdh38")
+disabled = true
+
+[connection signal="animation_finished" from="Character Walking" to="." method="_on_character_walking_animation_finished"]
