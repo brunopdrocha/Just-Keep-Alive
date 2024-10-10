@@ -3,6 +3,7 @@ extends CharacterBody2D
 const SPEED = 170
 
 var IsAttacking = false;
+@onready var swordstab = $swordstab
 
 @onready var anim = $"Character Walking"
 var current_dir = ""
@@ -34,6 +35,7 @@ func player_movement(delta: float) -> void:
 		
 	if  Input.is_action_just_pressed("Attack"):
 		$"Character Walking".play("Attack right");
+		swordstab.play()
 		current_dir == "Right"
 		IsAttacking = false;
 		$AttackArea/CollisionShape2D.disabled 	= false;
