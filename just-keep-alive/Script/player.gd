@@ -12,8 +12,31 @@ func _ready() -> void:
 	anim.play("Idle Down")
 	
 func _physics_process(delta: float) -> void:
-	player_movement(delta)  
+	if not IsAttacking:
+		player_movement(delta)  
 	player_animation()       
+	
+	move_and_slide()
+	
+func perform_attack() -> void:
+	IsAttacking = true  # Define que o personagem está atacando
+	# Verifica a direção atual e executa o ataque correspondente
+	if current_dir == "Right":
+		anim.play("Attack Right")
+		print("Direita")
+	elif current_dir == "Left":
+		anim.play("Attack Left")
+		print("Esquerda")
+	elif current_dir == "Down":
+		anim.play("Attack Down")
+		print("Baixo")
+	elif current_dir == "Up":
+		anim.play("Attack Up")
+		print("Acima")
+		
+	swordstab.play()  # Som da espada
+	$AttackArea/CollisionShape2D.disabled = false  # Habilita a área de ataque
+	_on_character_walking_animation_finished()
 
 func player_movement(delta: float) -> void:
 	velocity = Vector2.ZERO
@@ -30,21 +53,17 @@ func player_movement(delta: float) -> void:
 		velocity.y -= SPEED
 		current_dir = "Up"
 
-	if IsAttacking == false:
-		$"Character Walking".play("Idle Down");
-		
-	if  Input.is_action_just_pressed("Attack"):
-		$"Character Walking".play("Attack right");
-		swordstab.play()
-		current_dir == "Right"
-		IsAttacking = false;
-		$AttackArea/CollisionShape2D.disabled 	= false;
-	
-	move_and_slide()	
+# Inicia o ataque se o botão for pressionado
+	if Input.is_action_just_pressed("Attack") and not IsAttacking:
+		perform_attack()
+				
 	
 	
-
 func player_animation() -> void:
+	#Não Altera animação de movimento se estiver atacando
+	if IsAttacking:
+		return
+		
 	# Movement Animation
 	if velocity.length() > 0:
 		match current_dir:
@@ -59,7 +78,7 @@ func player_animation() -> void:
 	else:
 		match current_dir:
 			"Right":
-				anim.play("new_animationIdle Right")
+				anim.play("Idle Right")
 			"Left":
 				anim.play("Idle Left")
 			"Down":
@@ -70,8 +89,8 @@ func player_animation() -> void:
 
 	
 
-
 func _on_character_walking_animation_finished() -> void:
-	if $"Character Walking".animation == "attack right":
-		$AttackArea/CollisionShape2D.disabled = true;
-		IsAttacking = false;
+	# Verifica se a animação atual é de ataque
+	if IsAttacking == true:
+		$AttackArea/CollisionShape2D.disabled = true  # Desabilita a área de ataque
+		IsAttacking = false  # Define que o personagem não está mais atacando
