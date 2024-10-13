@@ -304,7 +304,7 @@ one_way_collision_margin = 0.0
 position = Vector2(0, 1)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_q1ra5")
-animation = &"Attack Left"
+animation = &"Idle Right"
 
 [node name="AttackArea" type="Area2D" parent="." groups=["Sword"]]
 
