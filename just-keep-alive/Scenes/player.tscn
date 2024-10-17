@@ -75,8 +75,8 @@ animations = [{
 "texture": ExtResource("5_bpqq7")
 }],
 "loop": false,
-"name": &"Attack down",
-"speed": 5.0
+"name": &"Attack Down",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -91,8 +91,8 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_3ae4y")
 }],
-"loop": true,
-"name": &"Attack left",
+"loop": false,
+"name": &"Attack Left",
 "speed": 10.0
 }, {
 "frames": [{
@@ -108,8 +108,8 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("13_rmoly")
 }],
-"loop": true,
-"name": &"Attack right",
+"loop": false,
+"name": &"Attack Right",
 "speed": 10.0
 }, {
 "frames": [{
@@ -126,8 +126,8 @@ animations = [{
 "texture": ExtResource("17_jt2hb")
 }],
 "loop": false,
-"name": &"Attack up",
-"speed": 5.0
+"name": &"Attack Up",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -304,7 +304,7 @@ one_way_collision_margin = 0.0
 position = Vector2(0, 1)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_q1ra5")
-animation = &"Attack right"
+animation = &"Idle Right"
 
 [node name="AttackArea" type="Area2D" parent="." groups=["Sword"]]
 

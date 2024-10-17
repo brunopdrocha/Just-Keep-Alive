@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdi883ttpipxc"]
+
+[ext_resource type="Theme" uid="uid://dhdqp8nddjawc" path="res://templates/button.tres" id="1_x6gdx"]
+[ext_resource type="Script" path="res://Script/pause_screen.gd" id="1_yhg1s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hevxp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ff3s"]
+bg_color = Color(0.53, 0, 0.0971667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j016j"]
+bg_color = Color(0.25, 0.25, 0.25, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.25, 0.25, 0.25, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmy3x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wg1k2"]
+
+[node name="PauseScreen" type="CanvasLayer"]
+script = ExtResource("1_yhg1s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1155.0
+offset_bottom = 647.0
+color = Color(0, 0, 0, 0.376471)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+clip_contents = true
+offset_left = 447.0
+offset_top = 264.0
+offset_right = 680.0
+offset_bottom = 398.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.65
+
+[node name="Resume Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("1_x6gdx")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_hevxp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5ff3s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j016j")
+text = "Resume"
+
+[node name="Restart Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("1_x6gdx")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_cmy3x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5ff3s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j016j")
+text = "Restart
+"
+
+[node name="Surrender Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("1_x6gdx")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_wg1k2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5ff3s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j016j")
+text = "Surrender
+"
+
+[connection signal="pressed" from="VBoxContainer/Resume Button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Restart Button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Surrender Button" to="." method="_on_surrender_button_pressed"]
