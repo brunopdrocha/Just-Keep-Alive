@@ -16,6 +16,7 @@ config/features=PackedStringArray("4.3", "GL Compatibility")
 
 [autoload]
 
+Global="*res://global.gd"
 StartGameMusic="*res://Scenes/start_game_music.tscn"
 BackGroundAudio="*res://Scenes/back_ground_audio.tscn"
 

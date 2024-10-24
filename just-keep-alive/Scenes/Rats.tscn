@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://d15lpsm3k0jmd"]
+[gd_scene load_steps=55 format=3 uid="uid://d15lpsm3k0jmd"]
 
 [ext_resource type="Script" path="res://Script/rats.gd" id="1_jaspo"]
 [ext_resource type="Texture2D" uid="uid://chqrucoynf16i" path="res://img/mobs/Rats/D_Attack.png" id="1_ovjcf"]
@@ -267,9 +267,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dhj5f")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -342,10 +342,13 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hrilo"]
-radius = 628.405
+radius = 721.325
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_caate"]
-radius = 15.0
+radius = 37.2156
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fkagj"]
+radius = 36.0139
 
 [node name="Rats" type="CharacterBody2D"]
 script = ExtResource("1_jaspo")
@@ -364,14 +367,30 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Detection Area"]
-position = Vector2(0.875486, 2.05755)
+position = Vector2(2.90373, 0.682201)
 shape = SubResource("CircleShape2D_hrilo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
 rotation = -0.0299312
+scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_caate")
+
+[node name="rats_hitbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rats_hitbox"]
+position = Vector2(-4, 0)
+shape = SubResource("CircleShape2D_fkagj")
+
+[node name="damage_cooldown" type="Timer" parent="."]
+wait_time = 0.5
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="AnimatedSprite2D/Detection Area" to="." method="_on_detection_area_area_entered"]
 [connection signal="body_entered" from="AnimatedSprite2D/Detection Area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_shape_exited" from="AnimatedSprite2D/Detection Area" to="." method="_on_detection_area_body_shape_exited"]
+[connection signal="body_entered" from="rats_hitbox" to="." method="_on_rats_hitbox_body_entered"]
+[connection signal="body_exited" from="rats_hitbox" to="." method="_on_rats_hitbox_body_exited"]
+[connection signal="timeout" from="damage_cooldown" to="." method="_on_damage_cooldown_timeout"]

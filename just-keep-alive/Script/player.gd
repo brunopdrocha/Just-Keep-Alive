@@ -2,6 +2,11 @@ extends CharacterBody2D
 
 const SPEED = 170
 
+var enemy_in_range = false
+var hp = 5
+var player_alive = true
+var enemy_attack_cooldown = true
+
 var IsAttacking = false
 @onready var swordstab = $swordstab
 
@@ -15,6 +20,13 @@ func _physics_process(delta: float) -> void:
 	if not IsAttacking:
 		player_movement(delta)  
 	player_animation()       
+	enemy_attack()
+	
+	if hp <= 0:
+		player_alive == false
+		print("O jogador morreu")
+		anim.play("Death Animation")
+	
 	
 	
 func perform_attack() -> void:
@@ -58,6 +70,7 @@ func player_movement(delta: float) -> void:
 	# Inicia o ataque se o botão for pressionado
 	if Input.is_action_just_pressed("Attack") and not IsAttacking:
 		perform_attack()
+		Global.player_current_attack = true
 				
 	move_and_slide()
 func player_animation() -> void:
@@ -92,3 +105,26 @@ func _on_character_walking_animation_finished() -> void:
 	if anim.animation in ["Attack Right", "Attack Left", "Attack Down", "Attack Up"]:
 		$AttackArea/CollisionShape2D.disabled = true  # Desabilita a área de ataque
 		IsAttacking = false  # Define que o personagem não está mais atacando
+
+
+func _on_attack_area_body_entered(body: Node2D) -> void:
+	if body.has_method("rats"):
+		enemy_in_range = true
+
+func _on_attack_area_body_exited(body: Node2D) -> void:
+	if body.has_method("rats"):
+		enemy_in_range = false
+		
+
+func enemy_attack():
+	if enemy_in_range and enemy_attack_cooldown == true:
+		hp = hp - 1
+		enemy_attack_cooldown = false
+		$"attack_cooldown".start()
+		print(hp)
+	
+func player():
+	pass
+
+func _on_attackcooldown_timeout() -> void:
+	enemy_attack_cooldown = true
