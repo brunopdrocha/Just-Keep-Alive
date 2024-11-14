@@ -1,14 +1,18 @@
 extends CanvasLayer
 
-# Chama quando o nó entra na árvore de cena
 func _ready() -> void:
-	return
-# Função chamada ao pressionar o botão de "continuar"
-func _on_resume_button_pressed() -> void:
-	return
-# Função chamada ao pressionar o botão de "reiniciar"
-func _on_restart_button_pressed() -> void:
-	return
-# Função chamada ao pressionar o botão de "sair"
-func _on_surrender_button_pressed() -> void:
-	return
+	visible = false # Menu de pausa começa invisível
+
+func _process(delta):
+	# Verifica se a tecla de "cancelar" (Esc) foi pressionada
+	if Input.is_action_just_pressed("ui_cancel"):
+		if visible:
+			# Se o menu de pausa estiver visível, despausa o jogo e esconde o menu
+			visible = false
+			get_tree().paused = false
+			print("Jogo Despausado")
+		else:
+			# Se o menu de pausa não estiver visível, pausa o jogo e mostra o menu
+			visible = true
+			get_tree().paused = true
+			print("Jogo Pausado")
