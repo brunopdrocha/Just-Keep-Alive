@@ -1,9 +1,30 @@
 [gd_scene load_steps=2 format=3 uid="uid://bdi883ttpipxc"]
 
-[ext_resource type="Script" path="res://Script/pause_screen.gd" id="1_yhg1s"]
+[sub_resource type="GDScript" id="GDScript_3ksyv"]
+script/source = "extends CanvasLayer
+
+func _ready() -> void:
+	visible = false # Menu de pausa começa invisível
+
+
+func _process(delta):
+	# Verifica se a tecla de \"cancelar\" (Esc) foi pressionada
+	if Input.is_action_just_pressed(\"ui_cancel\"):
+		if visible:
+			# Se o menu de pausa estiver visível, despausa o jogo e esconde o menu
+			visible = false
+			get_tree().paused = false
+			print(\"Jogo Despausado\")
+		else:
+			# Se o menu de pausa não estiver visível, pausa o jogo e mostra o menu
+			visible = true
+			get_tree().paused = true
+			print(\"Jogo Pausado\")
+"
 
 [node name="PauseScreen" type="CanvasLayer"]
-script = ExtResource("1_yhg1s")
+process_mode = 3
+script = SubResource("GDScript_3ksyv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1159.0
