@@ -345,10 +345,10 @@ animations = [{
 radius = 721.325
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_caate"]
-radius = 37.2156
+radius = 26.0768
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fkagj"]
-radius = 36.0139
+radius = 26.0192
 
 [node name="Rats" type="CharacterBody2D"]
 script = ExtResource("1_jaspo")
@@ -358,8 +358,7 @@ position = Vector2(-0.499991, 1)
 rotation = -0.0299312
 scale = Vector2(0.998161, 1.02051)
 sprite_frames = SubResource("SpriteFrames_iqv8t")
-animation = &"Death"
-frame_progress = 0.379319
+animation = &"Attack Front"
 
 [node name="Detection Area" type="Area2D" parent="AnimatedSprite2D"]
 rotation = -1.60222
@@ -373,7 +372,6 @@ shape = SubResource("CircleShape2D_hrilo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 1)
 rotation = -0.0299312
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_caate")
 
 [node name="rats_hitbox" type="Area2D" parent="."]
@@ -381,11 +379,19 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rats_hitbox"]
-position = Vector2(-4, 0)
 shape = SubResource("CircleShape2D_fkagj")
 
 [node name="damage_cooldown" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="heathbar" type="ProgressBar" parent="."]
+modulate = Color(0.431795, 1, 0.400872, 1)
+offset_left = -14.0
+offset_top = 26.0
+offset_right = 271.0
+offset_bottom = 76.0
+scale = Vector2(0.1, 0.1)
+show_percentage = false
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="AnimatedSprite2D/Detection Area" to="." method="_on_detection_area_area_entered"]

@@ -3,7 +3,7 @@ extends CharacterBody2D
 const SPEED = 170
 
 var enemy_in_range = false
-var hp = 5
+var hp = 100
 var player_alive = true
 var enemy_attack_cooldown = true
 
@@ -18,14 +18,16 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	if not IsAttacking:
-		player_movement(delta)  
+		player_movement(delta)
 	player_animation()       
 	enemy_attack()
+	update_health()
 	
 	if hp <= 0:
 		player_alive == false
 		print("O jogador morreu")
 		anim.play("Death Animation")
+		
 	
 	
 	
@@ -118,9 +120,10 @@ func _on_attack_area_body_exited(body: Node2D) -> void:
 
 func enemy_attack():
 	if enemy_in_range and enemy_attack_cooldown == true:
-		hp = hp - 1
+		hp = hp - 20
 		enemy_attack_cooldown = false
 		$"attack_cooldown".start()
+		$regen_timer.start()
 		print(hp)
 	
 func player():
@@ -128,3 +131,22 @@ func player():
 
 func _on_attackcooldown_timeout() -> void:
 	enemy_attack_cooldown = true
+
+func update_health():
+	var heathbar = $heathbar
+	heathbar.value = hp
+	
+	if hp >= 100:
+		heathbar.visible = false
+	else:
+		heathbar.visible = true
+
+func _on_regen_timer_timeout() -> void:
+	
+	if hp < 100:
+		hp = hp + 20
+		if hp > 100:
+			hp = 100
+	if hp <= 0:
+		hp = 0
+		

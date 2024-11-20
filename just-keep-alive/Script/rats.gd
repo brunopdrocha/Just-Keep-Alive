@@ -5,7 +5,7 @@ var speed = 35
 var player_chase = true
 var player = null
 var enemy_scene = preload("res://Scenes/Rats.tscn")
-var hp = 3
+var hp = 100
 var player_in_attack_zone = false
 var can_take_damage = true
 	
@@ -36,6 +36,8 @@ func _physics_process(delta):
 
 	move_and_slide()
 	take_damage()
+	update_health()
+	death()
 func _on_detection_area_body_entered(body):
 	player = body
 	player_chase = true
@@ -61,14 +63,28 @@ func _on_rats_hitbox_body_exited(body: Node2D) -> void:
 func take_damage():
 	if player_in_attack_zone and Global.player_current_attack == true:
 		if can_take_damage == true:
-			hp = hp - 1
-			$damage_cooldown.start()
+			hp = hp - 34
 			can_take_damage = false
+			$damage_cooldown.start()
 			print("Vida do rato: ", hp)
-			if hp <= 0:
-				anim.play("Death")
-				queue_free()
+			
+
+func death():
+	if hp <= 0:
+		anim.play("Death")
+		queue_free()
+			
 
 
 func _on_damage_cooldown_timeout() -> void:
 	can_take_damage = true
+	Global.player_current_attack == false
+
+func update_health():
+	var heathbar = $heathbar
+	heathbar.value = hp
+	
+	if hp >= 100:
+		heathbar.visible = false
+	else:
+		heathbar.visible = true
