@@ -26,3 +26,6 @@ https://lucid.app/lucidspark/e6ced033-696b-4d8a-8113-961d6e9526dd/edit?viewport_
 
 # Trello
 https://trello.com/invite/b/66da33176235d2edd3a4676a/ATTI02deb265ee71f2baee8bca9db3125a457589B0DF/just-keep-alive-tasks
+
+# Link do Game
+https://brunopdrocha.itch.io/just-keep-alive
