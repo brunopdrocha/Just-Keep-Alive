@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://bc8sncdv7qsb2"]
+[gd_scene load_steps=59 format=3 uid="uid://bc8sncdv7qsb2"]
 
 [ext_resource type="Texture2D" uid="uid://cty2t7rhwug1o" path="res://img/character/death animation/death1.png" id="1_0rg2e"]
 [ext_resource type="Script" path="res://Script/player.gd" id="1_x1hft"]
@@ -54,6 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://chayp3libon5x" path="res://img/character/Character with sword and shield/walk/walk up3.png" id="35_83abw"]
 [ext_resource type="Texture2D" uid="uid://bkjq7l0af081x" path="res://img/character/Character with sword and shield/walk/walk up4.png" id="36_art4d"]
 [ext_resource type="AudioStream" uid="uid://bf1pvw0gudvv7" path="res://audio/Swordstab.mp3" id="54_vijew"]
+[ext_resource type="AudioStream" uid="uid://b8t1inq5y86mr" path="res://audio/Morte_personagem.mp3" id="55_orptw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4awgg"]
 size = Vector2(25, 7)
@@ -329,6 +330,10 @@ show_percentage = false
 
 [node name="regen_timer" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="deathsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("55_orptw")
+volume_db = 1.963
 
 [connection signal="animation_finished" from="Character Walking" to="." method="_on_character_walking_animation_finished"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]

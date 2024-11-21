@@ -9,8 +9,9 @@ var enemy_attack_cooldown = true
 
 var IsAttacking = false
 @onready var swordstab = $swordstab
-
+@onready var deathsound = $deathsound
 @onready var anim = $"Character Walking"
+
 var current_dir = ""
 
 func _ready() -> void:
@@ -27,9 +28,9 @@ func _physics_process(delta: float) -> void:
 		player_alive == false
 		print("O jogador morreu")
 		anim.play("Death Animation")
+		$deathsound.play()
+		get_tree().change_scene_to_file("res://Scenes/Death.tscn")
 		
-	
-	
 	
 func perform_attack() -> void:
 	IsAttacking = true  # Define que o personagem está atacando
