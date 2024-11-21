@@ -1,9 +1,9 @@
 extends Panel
 
 var time: float = 0.0
-var minutes: int = 0
-var seconds: int = 0
-var msec: int = 0
+var minutes: int = Global.minutes
+var seconds: int = Global.seconds
+var msec: int = Global.msec
 
 func _process(delta) -> void:
 	time += delta
@@ -13,9 +13,14 @@ func _process(delta) -> void:
 	$VBoxContainer/HBoxContainer/Minutes.text = "%02d:" % minutes
 	$VBoxContainer/HBoxContainer/Seconds.text = "%02d." % seconds
 	$VBoxContainer/HBoxContainer/MSecs.text = "%03d" % msec
+	
+	Global.minutes = minutes
+	Global.seconds = seconds
+	Global.msec = msec
 
 func stop() -> void:
-	set_process(false)
 
+	set_process(false)
+	print(Global.minutes)
 func get_time_formatted() -> String:
 	return "%02d:%02d.%03d" % [minutes, seconds, msec]

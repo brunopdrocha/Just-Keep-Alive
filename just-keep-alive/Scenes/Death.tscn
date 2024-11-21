@@ -1,17 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bl0ptk0x6s5e3"]
+[gd_scene load_steps=6 format=3 uid="uid://bl0ptk0x6s5e3"]
 
 [ext_resource type="Script" path="res://Scenes/death.gd" id="1_p5m3b"]
 [ext_resource type="Texture2D" uid="uid://b63ct6ckbbtk8" path="res://img/backgorund/Death2.webp" id="2_smlud"]
 [ext_resource type="AudioStream" uid="uid://bdl2525q7uti0" path="res://audio/Som_tela_de_morte.mp3" id="3_4c2ex"]
 [ext_resource type="Theme" uid="uid://dhdqp8nddjawc" path="res://templates/button.tres" id="3_j1gex"]
+[ext_resource type="Script" path="res://Scenes/TimeDeath.gd" id="4_cu5mh"]
 
 [node name="Death" type="CanvasLayer"]
 script = ExtResource("1_p5m3b")
 
 [node name="background" type="TextureRect" parent="."]
-offset_left = -1.0
 offset_top = 2.0
-offset_right = 1931.0
+offset_right = 1932.0
 offset_bottom = 1080.0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_smlud")
@@ -34,6 +34,39 @@ self_modulate = Color(0.815686, 0.0588235, 0.196078, 1)
 layout_mode = 2
 theme = ExtResource("3_j1gex")
 text = "Quit"
+
+[node name="Panel" type="Panel" parent="background"]
+offset_left = -30.0
+offset_top = -165.0
+offset_right = 10.0
+offset_bottom = -125.0
+size_flags_horizontal = 8
+script = ExtResource("4_cu5mh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="background/Panel"]
+layout_mode = 0
+offset_left = 908.333
+offset_top = 1186.67
+offset_right = 1126.33
+offset_bottom = 1230.67
+
+[node name="HBoxContainer" type="HBoxContainer" parent="background/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Minutes" type="Label" parent="background/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_j1gex")
+text = "00:"
+
+[node name="Seconds" type="Label" parent="background/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_j1gex")
+text = "00:"
+
+[node name="MSecs" type="Label" parent="background/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_j1gex")
+text = "00"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_4c2ex")
