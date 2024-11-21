@@ -345,10 +345,10 @@ animations = [{
 radius = 721.325
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_caate"]
-radius = 26.0768
+radius = 10.0499
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fkagj"]
-radius = 26.0192
+radius = 54.037
 
 [node name="Rats" type="CharacterBody2D"]
 script = ExtResource("1_jaspo")
@@ -361,11 +361,13 @@ sprite_frames = SubResource("SpriteFrames_iqv8t")
 animation = &"Attack Front"
 
 [node name="Detection Area" type="Area2D" parent="AnimatedSprite2D"]
+visible = false
 rotation = -1.60222
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Detection Area"]
+visible = false
 position = Vector2(2.90373, 0.682201)
 shape = SubResource("CircleShape2D_hrilo")
 
@@ -375,6 +377,7 @@ rotation = -0.0299312
 shape = SubResource("CircleShape2D_caate")
 
 [node name="rats_hitbox" type="Area2D" parent="."]
+visible = false
 collision_layer = 2
 collision_mask = 2
 

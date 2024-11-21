@@ -38,6 +38,7 @@ func _physics_process(delta):
 	take_damage()
 	update_health()
 	death()
+	
 func _on_detection_area_body_entered(body):
 	player = body
 	player_chase = true
