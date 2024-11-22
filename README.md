@@ -21,11 +21,14 @@ O personagem enfrentará hodas imparavéis de ratos que tentam mata-lo. Esses mo
 ## 🕹️ Mecânicas
 O personagem consegue se mover pela floresta e atacar os mobs com sua espada, deve desviar e encontrar o melhor caminho entre hordas cada vez maiores de ratos.
 
-# 🖼 Business Canva Game
+## 🖼 Business Canva Game
 https://lucid.app/lucidspark/e6ced033-696b-4d8a-8113-961d6e9526dd/edit?viewport_loc=-16%2C2347%2C2457%2C1153%2C0_0&invitationId=inv_a51624d8-6469-46d2-a6c2-cbc99fc93f3a
 
-# Trello
+## Trello
 https://trello.com/invite/b/66da33176235d2edd3a4676a/ATTI02deb265ee71f2baee8bca9db3125a457589B0DF/just-keep-alive-tasks
 
-# Link do Game
+## Link Apresentação
+https://www.canva.com/design/DAGR5daR4qI/UX4r5yA7VP9128RMA15tFw/edit?utm_content=DAGR5daR4qI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+## Link do Game
 https://brunopdrocha.itch.io/just-keep-alive
