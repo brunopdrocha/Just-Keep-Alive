@@ -6,6 +6,9 @@
 
 # 🕹️ Nome do jogo : Just Keep Alive
 
+## Link do Game
+https://brunopdrocha.itch.io/just-keep-alive
+
 # 📖 Explicação do Jogo
 Você controla um personagem que, ao tentar voltar para casa, se encontra perdido em uma floresta misteriosa. Durante sua jornada o jogador deve explorar este ambiente desconhecido, enfrentando perigos e mistérios ao longo do caminho, enquanto busca uma forma sobreviver. A atmosfera é densa e enigmática, com segredos ocultos à espera de serem desvendados.
 
@@ -30,5 +33,4 @@ https://trello.com/invite/b/66da33176235d2edd3a4676a/ATTI02deb265ee71f2baee8bca9
 ## Link Apresentação
 https://www.canva.com/design/DAGR5daR4qI/UX4r5yA7VP9128RMA15tFw/edit?utm_content=DAGR5daR4qI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-## Link do Game
-https://brunopdrocha.itch.io/just-keep-alive
+
